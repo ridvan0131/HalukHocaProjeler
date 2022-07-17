@@ -1,8 +1,6 @@
 package day01;
 
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class Q_6 {
     public static void main(String[] args) {
@@ -19,6 +17,10 @@ public class Q_6 {
         double kilo=scan.nextDouble();
 
 
-        System.out.println("Isminiz: "+isim+"\n"+"Soyadiniz: "+soyad+"\n"+"Yasiniz: "+yas+"\n"+"Boyunuz: "+boy+"cm"+"\n"+"Kilonuz: "+kilo);
+        System.out.println("Isminiz: "+isim+"\n"
+                +"Soyadiniz: "+soyad+"\n"
+                +"Yasiniz: "+yas+"\n"
+                +"Boyunuz: "+boy+"cm" +"\n"
+                +"Kilonuz: "+kilo);
     }
 }
