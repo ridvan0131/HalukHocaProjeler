@@ -2,7 +2,7 @@ package day01;
 
 import java.util.Scanner;
 
-public class Q_07 {
+public class Q_7 {
     public static void main(String[] args) {
         //kullanicidan iki tam sayi alip bu iki sayinin dort islem sonucu?
 
