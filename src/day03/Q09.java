@@ -1,10 +1,8 @@
-package _03_IfStatement_TernaryOperator;
+package day03;
 
 public class Q09 {
-
     public static void main(String[] args) {
-
-       /*   45 değerinde bir double oluşturun.
+         /*   45 değerinde bir double oluşturun.
             Eğer double 5'e bölününce kalan 0 ise ve double 8'e bölününce kalan 0 ise
             "able to divide by 5 and 8" yazdırınız.
 
@@ -12,11 +10,10 @@ public class Q09 {
             "able to divide by 9 and divide by 10 reminder is 5" yazdırınız.
         */
 
-        double number = 45;
-
-        if (number % 5 == 0 && number % 8 == 0) {
+        double deger=135;
+        if (deger%8==0&&deger%5==0){
             System.out.println("able to divide by 5 and 8");
-        } else if (number % 10 == 5 && number % 9 == 0) {
+        }else if (deger%10==5&&deger%9==0){
             System.out.println("able to divide by 9 and divide by 10 reminder is 5");
         }
     }
