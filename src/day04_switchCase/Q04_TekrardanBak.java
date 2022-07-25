@@ -2,51 +2,56 @@ package day04_switchCase;
 
 import java.util.Scanner;
 
-public class Q04 {
+public class Q04_TekrardanBak {
     public static void main(String[] args) {
-        // Bugüne göre 100 gün sonra hangi gün olduğunuz yazdırınız.
+// Bugüne göre 100 gün sonra hangi gün olduğunuz yazdırınız.
         // pazartesi
+        Scanner scan = new Scanner(System.in);
+        System.out.print(
+                "Pazartesi: 1 \nSalı: 2 \nÇarşamba: 3 \nPerşembe: 4 \nCuma: 5 \nCumartesi: 6 \nPazar: 7 \nLütfen haftanın kaçıncı gününde olduğunuzu yazın: ");
+        int kancıncıGun = scan.nextInt();
+        System.out.println("Lütfen kaç gün sonrasını merak ettiğinizi yazın :");
+        int kacGun = scan.nextInt();
 
-        Scanner scanner=new Scanner(System.in);
-        System.out.print("Bugun gunlerden hangisi" +
-                "\nPazartesi ise:1 e basiniz" +
-                "\nSali ise:2 ye basiniz" +
-                "\nCarsamba ise:3 e basiniz" +
-                "\nPersembe ise:4 e basiniz" +
-                "\nCuma ise:5 e basiniz" +
-                "\nCumartesi ise:6 ya basiniz" +
-                "\nPazar ise:7 ye basiniz");
-        int gunlerdenHangisi=scanner.nextInt();
-        System.out.print("Merak ettiginiz gunun sayisini giriniz: ");
-        int merakEdilenGun=scanner.nextInt();
+        int hangiGün = (kacGun % 7 + kancıncıGun) % 7;
 
-        int sonuc=merakEdilenGun%7;
-
-        switch (gunlerdenHangisi){
-            case 1:
-                System.out.println("Merak edilen gun olan: "+merakEdilenGun+ ", Pazartesi gunudur.");
-            break;
-            case 2:
-                System.out.println("Merak edilen gun olan: "+merakEdilenGun+ ", Sali gunudur.");
-                break;
-            case 3:
-                System.out.println("Merak edilen gun olan: "+merakEdilenGun+ ", Carsamba gunudur.");
-                break;
-            case 4:
-                System.out.println("Merak edilen gun olan: "+merakEdilenGun+ ", Persembe gunudur.");
-                break;
-            case 5:
-                System.out.println("Merak edilen gun olan: "+merakEdilenGun+ ", Cuma gunudur.");
-                break;
-            case 6:
-                System.out.println("Merak edilen gun olan: "+merakEdilenGun+ ", Cumartesi gunudur.");
-                break;
-            case 7:
-                System.out.println("Merak edilen gun olan: "+merakEdilenGun+ ", Pazar gunudur.");
-                break;
-            default:
-                System.out.println("Hatali bir gun girdiniz...");
-
+        if (kancıncıGun <= 7 && kancıncıGun > 0) {
+            if (kacGun > 0) {
+                switch (hangiGün) {
+                    case 1: {
+                        System.out.println(kacGun + " gün sonra günlerden Pazartesi.");
+                        break;
+                    }
+                    case 2: {
+                        System.out.println(kacGun + " gün sonra günlerden Salı.");
+                        break;
+                    }
+                    case 3: {
+                        System.out.println(kacGun + " gün sonra günlerden Çarşamba.");
+                        break;
+                    }
+                    case 4: {
+                        System.out.println(kacGun + " gün sonra günlerden Perşembe.");
+                        break;
+                    }
+                    case 5: {
+                        System.out.println(kacGun + " gün sonra günlerden Cuma.");
+                        break;
+                    }
+                    case 6: {
+                        System.out.println(kacGun + " gün sonra günlerden Cumartesi.");
+                        break;
+                    }
+                    case 7: {
+                        System.out.println(kacGun + " gün sonra günlerden Pazar.");
+                        break;
+                    }
+                }
+            } else {
+                System.out.println("Geçmiş geçmişte kaldı :)");
+            }
+        } else {
+            System.out.println("Hafta 7 gün dostum!");
         }
     }
 }
