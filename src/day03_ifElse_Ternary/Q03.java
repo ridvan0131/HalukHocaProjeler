@@ -6,7 +6,7 @@ public class Q03 {
     public static void main(String[] args) {
         /*
 		 *  Kullanicidan boyunu  CM  ve kilosunu kg alarak  BMI (VKE) hesaplayiniz
-		BMI = kilo(kg) /(boy*boy)(cm)
+		BMI = kilo(kg) /(boy/100*boy/100)(cm)
 		BMI <=20 oldukca zayifsiniz
 		20<BMI<=25 Normal sinirlardasiniz
 		25<BMI<=30 Sisman kategorisindesiniz
@@ -19,7 +19,7 @@ public class Q03 {
         double cm=scan.nextDouble()/100;
         double kg=scan.nextDouble();
 
-        double bki=kg/(cm*cm);
+        double bki=kg/(cm*cm/1000);
         if (bki<=20){
             System.out.println("Beden Kitle indeksiniz: "+bki+" Oldukca zayifsiniz");
         } else if (bki<=25){
